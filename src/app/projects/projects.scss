@@ -1,0 +1,172 @@
+.projects-section {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: #0b0b14;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading > p:first-child {
+  color: #ff4f9a;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2 {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 span {
+  color: #ff4f9a;
+}
+
+.heading-description {
+  color: #a9a9b3;
+  font-size: 16px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.project-card {
+  overflow: hidden;
+
+  background: #12121e;
+
+  border: 1px solid #252536;
+  border-radius: 16px;
+
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff4f9a;
+}
+
+.project-image {
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #181827;
+
+  border-bottom: 1px solid #252536;
+}
+
+.project-image span {
+  font-size: 65px;
+}
+
+.project-content {
+  padding: 30px;
+}
+
+.project-type {
+  color: #ff4f9a;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+.project-content h3 {
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 24px;
+
+  margin-bottom: 15px;
+}
+
+.project-content > p:not(.project-type) {
+  color: #a9a9b3;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+.tech-stack span {
+  padding: 6px 12px;
+
+  border-radius: 20px;
+
+  background: #1d1d2b;
+
+  color: #d1d5db;
+
+  font-size: 12px;
+}
+
+.project-links {
+  display: flex;
+  gap: 20px;
+}
+
+.project-links a {
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.project-links a:hover {
+  color: #ff4f9a;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .projects-section {
+    padding: 80px 6%;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
