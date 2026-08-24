@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.scss'
 })
 export class Navbar {
-
 }
