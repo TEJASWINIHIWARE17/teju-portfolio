@@ -1,5 +1,4 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
 
 import { About } from './about/about';
 import { Skills } from './skills/skills';
@@ -10,8 +9,8 @@ import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-root',
+
   imports: [
-    RouterOutlet,
     About,
     Skills,
     Projects,
@@ -19,9 +18,10 @@ import { Navbar } from './navbar/navbar';
     Contact,
     Navbar
   ],
+
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('teju-portfolio');
+
 }
