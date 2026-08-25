@@ -1,60 +1,153 @@
-<!-- NAVBAR -->
-<app-navbar></app-navbar>
+<div class="portfolio">
 
-<main>
+  <!-- NAVBAR -->
+  <app-navbar></app-navbar>
+
 
   <!-- HOME -->
-  <section id="home" class="home-section">
+  <main id="home">
 
-    <div class="home-content">
+    <div class="hero">
 
-      <p class="welcome-text">WELCOME TO MY PORTFOLIO</p>
+      <div class="hero-content">
 
-      <h1>
-        Hi, I'm <span>Teju</span>
-      </h1>
+        <p class="small-title">// PYTHON DEVELOPER</p>
 
-      <h2>Python Developer & AI/ML Enthusiast</h2>
+        <h1>
+          Building
+          <br>
+          <span>Backend</span>
+          <br>
+          Solutions
+          <br>
+          That Matter
+        </h1>
 
-      <p class="home-description">
-        I build practical applications, REST APIs and
-        data-driven solutions using modern technologies.
-      </p>
+        <p class="description">
+          I build clean, scalable backend systems,
+          REST APIs and practical software solutions
+          using modern technologies.
+        </p>
 
-      <div class="home-buttons">
+        <div class="hero-buttons">
 
-        <a href="#about" class="primary-btn">
-          About Me
-        </a>
+          <a href="#projects" class="btn-primary">
+            View Projects →
+          </a>
 
-        <a href="#projects" class="secondary-btn">
-          My Projects
-        </a>
+          <a href="#contact" class="btn-secondary">
+            Get in Touch
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CODE WINDOW -->
+
+      <div class="code-window">
+
+        <div class="window-header">
+
+          <div class="window-dots">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+          </div>
+
+          <span class="file-name">
+            developer.py
+          </span>
+
+        </div>
+
+
+        <div class="code-body">
+
+          <div>
+            <span class="keyword">class</span>
+            <span class="class-name">Developer</span>:
+          </div>
+
+          <div class="indent">
+            name =
+            <span class="string">
+              "Teju Hiware"
+            </span>
+          </div>
+
+          <div class="indent">
+            role =
+            <span class="string">
+              "Python Developer"
+            </span>
+          </div>
+
+          <div class="indent">
+            skills = [
+          </div>
+
+          <div class="double-indent">
+            <span class="string">"Python"</span>,
+          </div>
+
+          <div class="double-indent">
+            <span class="string">"FastAPI"</span>,
+          </div>
+
+          <div class="double-indent">
+            <span class="string">"MongoDB"</span>,
+          </div>
+
+          <div class="double-indent">
+            <span class="string">"Angular"</span>
+          </div>
+
+          <div class="indent">
+            ]
+          </div>
+
+          <br>
+
+          <div class="indent">
+            focus =
+          </div>
+
+          <div class="double-indent">
+            <span class="string">
+              "Backend &amp; APIs"
+            </span>
+          </div>
+
+          <br>
+
+          <div class="indent">
+            status =
+            <span class="string">
+              "Always Learning"
+            </span>
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
-  </section>
+  </main>
 
 
-  <!-- ABOUT -->
+  <!-- OTHER COMPONENTS -->
+
   <app-about></app-about>
 
-
-  <!-- SKILLS -->
   <app-skills></app-skills>
 
-
-  <!-- PROJECTS -->
   <app-projects></app-projects>
 
-
-  <!-- EXPERIENCE -->
   <app-experience></app-experience>
 
-
-  <!-- CONTACT -->
   <app-contact></app-contact>
 
-</main>
+</div>
