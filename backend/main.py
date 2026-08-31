@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from database.mongodb import check_database_connection
+
 
 app = FastAPI(
     title="Teju Hiware Portfolio API",
@@ -23,11 +25,22 @@ app.add_middleware(
 
 
 # ==============================
+# STARTUP
+# ==============================
+
+@app.on_event("startup")
+def startup_event():
+
+    check_database_connection()
+
+
+# ==============================
 # HOME
 # ==============================
 
 @app.get("/")
 def home():
+
     return {
         "message": "Teju Hiware Portfolio API is running"
     }
@@ -39,6 +52,7 @@ def home():
 
 @app.get("/api/health")
 def health_check():
+
     return {
         "status": "success",
         "message": "Backend is healthy"
