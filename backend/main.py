@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from database.mongodb import check_database_connection
+from database.mongodb import (
+    check_database_connection,
+    contacts_collection
+)
 
 
 app = FastAPI(
@@ -53,4 +56,32 @@ def health_check():
     return {
         "status": "success",
         "message": "Backend is healthy"
+    }
+
+
+# ==============================
+# CONTACT
+# ==============================
+
+@app.post("/api/contact")
+def create_contact(
+    name: str,
+    email: str,
+    subject: str,
+    message: str
+):
+
+    contact_data = {
+        "name": name,
+        "email": email,
+        "subject": subject,
+        "message": message
+    }
+
+    result = contacts_collection.insert_one(contact_data)
+
+    return {
+        "status": "success",
+        "message": "Contact message saved successfully",
+        "id": str(result.inserted_id)
     }
