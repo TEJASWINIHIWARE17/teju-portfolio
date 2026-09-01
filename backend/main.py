@@ -30,7 +30,6 @@ app.add_middleware(
 
 @app.on_event("startup")
 def startup_event():
-
     check_database_connection()
 
 
@@ -40,7 +39,6 @@ def startup_event():
 
 @app.get("/")
 def home():
-
     return {
         "message": "Teju Hiware Portfolio API is running"
     }
@@ -52,7 +50,6 @@ def home():
 
 @app.get("/api/health")
 def health_check():
-
     return {
         "status": "success",
         "message": "Backend is healthy"
